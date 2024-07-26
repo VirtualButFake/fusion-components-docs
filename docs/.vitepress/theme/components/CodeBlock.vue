@@ -42,7 +42,7 @@
 
 		for (let [linkTo, { text, url }] of links) {
             if (url.startsWith("#")) {
-                url = `/${page.value.relativePath.split(".md")[0]}/${url}`
+                url = `/${page.value.relativePath.split(".md")[0]}${url}`
             }
 
 			out = out.replace(

@@ -7,7 +7,7 @@ description: A simple icon that can be used to show either a Lucide icon or Robl
 properties:
   - name: "Icon"
     type: |
-      [icon](#types-icon)
+      [icon](#type-icon)
     description: |
       The name of the icon to show.
   - name: "Color"

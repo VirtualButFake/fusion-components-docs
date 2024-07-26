@@ -8,7 +8,7 @@ properties:
     type: "fusion.CanBeState<[themeFramework.color](/libs/theme-framework#type-color)>?"
   - name: "Text"
     type: |
-      fusion.CanBeState<string> | [text](#types-text)
+      fusion.CanBeState<string> | [text](#type-text)
   - name: "TweenSettings"
     description: "The tween settings for transitioning between appearances."
     type: "TweenInfo?"
