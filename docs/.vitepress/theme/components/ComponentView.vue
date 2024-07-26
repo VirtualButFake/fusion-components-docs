@@ -196,7 +196,7 @@
 			<MarkdownString
 				:content="`With these states and colors, you can apply custom \`AppearanceOverride\`s to your components to match your design system.
             A more comprehensive guide on Appearance Overrides can be found [here](/getting-started#appearance-overrides).
-            The default colors for this component can be found [here](https://github.com/VirtualButFake/FusionComponents/tree/main/src/theme/components/${props.frontmatter.name.toLowerCase()}).
+            The default colors for this component can be found [here](https://github.com/VirtualButFake/fusion-components/tree/main/src/theme/components/${props.frontmatter.name.toLowerCase()}).
             The following states and colors are available for theming:
             `"
 			/>

@@ -149,7 +149,7 @@ export default defineConfig({
 		socialLinks: [
 			{
 				icon: "github",
-				link: "https://github.com/VirtualButFake/FusionComponents",
+				link: "https://github.com/VirtualButFake/fusion-components",
 			},
 		],
 		search: {
@@ -164,10 +164,6 @@ export default defineConfig({
 					return html;
 				},
 			},
-		},
-		editLink: {
-			pattern:
-				"https://github.com/virtualbutfake/FusionComponents/edit/main/docs/:path",
 		},
 	},
 	lastUpdated: true,
