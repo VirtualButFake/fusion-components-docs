@@ -4,20 +4,20 @@ outline: deep
 
 <script setup>
 const packageVersions = {
-    FusionComponents: "0.0.265",
+    fusioncomponents: "0.0.265",
     "theme-framework": "0.0.153",
     "fusion-utils": "0.0.144",
-    Tailwind: "0.0.135",
+    tailwind: "0.0.135",
 }
 
 const packagesContent = `[dependencies]
-FusionComponents = "VirtualButFake/FusionComponents@${packageVersions.FusionComponents}"
-theme-framework = "VirtualButFake/theme-framework@${packageVersions["theme-framework"]}"
+fusionComponents = "VirtualButFake/FusionComponents@${packageVersions.fusioncomponents}"
+themeFramework = "VirtualButFake/theme-framework@${packageVersions["theme-framework"]}"
 # fusion-utils is recommended due to a lot of components depending on a 
 # layer being created. This is done through [TopLayerProvider](/libs/top-layer-provider) in fusion-utils.
-fusion-utils = "VirtualButFake/fusion-utils@${packageVersions["fusion-utils"]}"
+fusionUtils = "VirtualButFake/fusion-utils@${packageVersions["fusion-utils"]}"
 # If you want to use Tailwind colors for your themes, add this line.
-Tailwind = "VirtualButFake/Tailwind@${packageVersions.Tailwind}"`
+tailwind = "VirtualButFake/Tailwind@${packageVersions.tailwind}"`
 </script>
 
 # Getting Started
