@@ -4,6 +4,8 @@ export default defineConfig({
 	title: "FusionComponents",
 	description: "Documentation for all components included in FusionComponents",
 	cleanUrls: true,
+    // this is done for the docs server- it separates src and build
+    outDir: "../../build",
 	themeConfig: {
 		nav: [
 			{ text: "Home", link: "/" },
