@@ -7,7 +7,7 @@ async function getVersioningData(): Promise<
 > {
 	try {
 		// @ts-ignore - there's a shared file that has the navbar data for versioning on the server, but it's not in this repo
-		return await import("../../../../../../navbar.json");
+		return await require("../../../../../../navbar.json");
 	} catch {
 		return [
 			{
