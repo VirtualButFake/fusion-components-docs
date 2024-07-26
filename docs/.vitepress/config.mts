@@ -22,7 +22,20 @@ async function getCurrentVersion(): Promise<string> {
 	try {
 		return (await import("../../version.json")).default.version;
 	} catch {
-		return "ss";
+		return "";
+	}
+}
+
+async function getBaseUrl() {
+	// check if we're on the server by seeing if the navbar import works
+	try {
+		// @ts-ignore
+		await require("../../../../../navbar.json");
+		return `/fusioncomponents/${
+			(await import("../../version.json")).default.version
+		}`;
+	} catch {
+		return "/";
 	}
 }
 
@@ -32,6 +45,7 @@ export default defineConfig({
 	cleanUrls: true,
 	// this is done for the docs server- it separates src and build
 	outDir: "../../build",
+	base: await getBaseUrl(),
 	themeConfig: {
 		nav: [
 			{ text: "Home", link: "/" },
