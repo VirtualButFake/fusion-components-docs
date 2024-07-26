@@ -1,16 +1,46 @@
 import { defineConfig } from "vitepress";
+import { DefaultTheme } from "vitepress/types";
+
+// icba to type this
+async function getVersioningData(): Promise<
+	Array<DefaultTheme.NavItemWithLink>
+> {
+	try {
+		// @ts-ignore - there's a shared file that has the navbar data for versioning on the server, but it's not in this repo
+		return await import("../../../../../../navbar.json");
+	} catch {
+		return [
+			{
+				text: "Versioning data does not load when running locally",
+				link: "/",
+			},
+		];
+	}
+}
+
+async function getCurrentVersion(): Promise<string> {
+	try {
+		return (await import("../../version.json")).default.version;
+	} catch {
+		return "ss";
+	}
+}
 
 export default defineConfig({
 	title: "FusionComponents",
 	description: "Documentation for all components included in FusionComponents",
 	cleanUrls: true,
-    // this is done for the docs server- it separates src and build
-    outDir: "../../build",
+	// this is done for the docs server- it separates src and build
+	outDir: "../../build",
 	themeConfig: {
 		nav: [
 			{ text: "Home", link: "/" },
 			{ text: "Guide", link: "/get-started" },
 			{ text: "Components", link: "/components/base/button" },
+			{
+				text: await getCurrentVersion(),
+				items: await getVersioningData(),
+			},
 		],
 
 		sidebar: [
