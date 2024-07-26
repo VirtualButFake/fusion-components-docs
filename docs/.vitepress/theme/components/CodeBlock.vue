@@ -1,6 +1,9 @@
 <script setup>
-	import { ref, toRef, watch, onMounted } from "vue";
+	import { useData } from "vitepress";
+	import { ref, toRef, watch } from "vue";
 	import shikiHighlighter from "../shikiHighlighter";
+
+	const { site } = useData();
 
 	const props = defineProps({
 		content: {
@@ -38,7 +41,10 @@
 		let out = await shikiHighlighter.codeToHtml(content, props.lang);
 
 		for (const [linkTo, { text, url }] of links) {
-			out = out.replace(linkTo, `<a href="${url}">${text}</a>`);
+			out = out.replace(
+				linkTo,
+				`<a href="${site.value.base.slice(0, -1)}${url}">${text}</a>`
+			);
 		}
 
 		codeOutput.value = out;

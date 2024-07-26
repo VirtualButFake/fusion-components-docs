@@ -1,7 +1,10 @@
 <script setup>
+    import { useData } from "vitepress";
 	import Card from "primevue/card";
 	import ThemedImage from "./ThemedImage.vue";
 	import CodeBlock from "./CodeBlock.vue";
+
+    const { site } = useData();
 
 	const props = defineProps({
 		image: {
@@ -33,7 +36,7 @@
 	>
 		<template #header>
 			<div class="border-b border-[#e2e2e3] dark:border-[#2e2e32] p-2">
-				<ThemedImage :src="props.image" :srcDark="props.imageDark" />
+				<ThemedImage :src="`${site.base}${props.image}`" :srcDark="`${site.base}${props.imageDark}`" />
 			</div>
 		</template>
 		<template #footer>

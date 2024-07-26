@@ -1,6 +1,9 @@
 <script setup>
+	import { useData } from "vitepress";
 	import { computed } from "vue";
 	import markdownRenderer from "../markdownRenderer";
+
+	const { site } = useData();
 
 	const props = defineProps({
 		content: {
@@ -9,7 +12,9 @@
 		},
 	});
 
-	const html = computed(() => markdownRenderer.render(props.content));
+	const html = computed(() => {
+		return markdownRenderer.render(props.content, site.value.base);
+	});
 </script>
 
 <template>

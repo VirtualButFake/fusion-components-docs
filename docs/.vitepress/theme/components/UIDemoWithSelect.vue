@@ -5,7 +5,8 @@
 	import CodeBlock from "./CodeBlock.vue";
 	import { useData } from "vitepress";
 	import { ref, watch } from "vue";
-	import { computedAsync } from "@vueuse/core";
+
+    const { site } = useData();
 
 	const props = defineProps({
 		frontmatter: {
@@ -27,7 +28,7 @@
 	const code = ref("");
 
 	function updateCode([newColor, newVariant]) {
-        fileExtension.value = "png";
+		fileExtension.value = "png";
 
 		code.value = props.frontmatter.componentCode
 			.replace("<color>", `"${getIdentifierForColor(newColor)}"`)
@@ -105,7 +106,7 @@
 			<div class="border-b border-[#e2e2e3] dark:border-[#2e2e32] p-2">
 				<ClientOnly>
 					<AwaitImage
-						:src="`/${props.frontmatter.name.toLowerCase()}-${getIdentifierForColor(
+						:src="`${site.base}${props.frontmatter.name.toLowerCase()}-${getIdentifierForColor(
 							selectedColor
 						)}-${selectedVariant}-${
 							isDark ? 'dark' : 'light'
