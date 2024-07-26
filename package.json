@@ -1,0 +1,37 @@
+{
+	"name": "FusionComponents",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/VirtualButFake/FusionComponents.git"
+	},
+	"author": "virtualbutfake",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/VirtualButFake/FusionComponents/issues"
+	},
+	"homepage": "https://github.com/VirtualButFake/FusionComponents#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.39",
+		"tailwindcss": "^3.4.5",
+		"vitepress": "^1.3.1"
+	},
+	"dependencies": {
+		"@iconify/vue": "^4.1.2",
+		"@primevue/themes": "^4.0.0",
+		"@vueuse/core": "^10.11.0",
+		"camelcase": "^8.0.0",
+		"markdown-it": "^14.1.0",
+		"primevue": "^4.0.0",
+		"shiki": "^1.10.3"
+	}
+}
