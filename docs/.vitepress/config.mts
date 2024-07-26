@@ -19,24 +19,13 @@ async function getVersioningData(): Promise<
 }
 
 async function getCurrentVersion(): Promise<string> {
-	try {
-		return (await import("../../version.json")).default.version;
-	} catch {
-		return "";
-	}
+	return (await import("../../version.json")).default.version;
 }
 
 async function getBaseUrl() {
-	// check if we're on the server by seeing if the navbar import works
-	try {
-		// @ts-ignore
-		await require("../../../../../navbar.json");
-		return `/fusioncomponents/${
-			(await import("../../version.json")).default.version
-		}`;
-	} catch {
-		return "/";
-	}
+	return `/fusioncomponents/${
+		(await import("../../version.json")).default.version
+	}`;
 }
 
 export default defineConfig({

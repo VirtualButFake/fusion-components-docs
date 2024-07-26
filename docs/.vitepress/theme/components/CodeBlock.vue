@@ -3,7 +3,7 @@
 	import { ref, toRef, watch } from "vue";
 	import shikiHighlighter from "../shikiHighlighter";
 
-	const { site } = useData();
+	const { site, page } = useData();
 
 	const props = defineProps({
 		content: {
@@ -40,7 +40,11 @@
 
 		let out = await shikiHighlighter.codeToHtml(content, props.lang);
 
-		for (const [linkTo, { text, url }] of links) {
+		for (let [linkTo, { text, url }] of links) {
+            if (url.startsWith("#")) {
+                url = `/${page.value.relativePath.split(".md")[0]}/${url}`
+            }
+
 			out = out.replace(
 				linkTo,
 				`<a href="${site.value.base.slice(0, -1)}${url}">${text}</a>`

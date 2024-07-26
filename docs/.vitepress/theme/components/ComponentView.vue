@@ -275,7 +275,7 @@
 				:content="type.description"
 			/>
 			<div v-if="type.type">
-				<h4 class="mt-0" :id="`type-${type.name}-type`">Type</h4>
+				<h4 class="mt-2" :id="`type-${type.name}-type`" v-if="type.description">Type</h4>
 				<CodeBlock :content="`type ${camelCase(type.name)} = ${type.type}`" />
 			</div>
 		</div>
