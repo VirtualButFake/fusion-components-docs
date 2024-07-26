@@ -50,7 +50,7 @@ properties:
   - name: "Indicator"
     type: "fusion.CanBeState<boolean>?"
   - name: "Labels"
-    type: "fusion.CanBeState<{ [label](#types-label) }>"
+    type: "fusion.CanBeState<{ [label](#type-label) }>"
   - name: "Instance Properties"
     description: "This instance takes all the properties of a `Frame`. `SpecialKeys`, such as `fusion.Children` will also be passed to the instance."
 
