@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, toRef, watch } from "vue";
+	import { ref, toRef, watch, onMounted } from "vue";
 	import shikiHighlighter from "../shikiHighlighter";
 
 	const props = defineProps({
@@ -17,7 +17,7 @@
 		"<p>Code block has not loaded. An error may have occurred.</p>"
 	);
 
-	function updateHtml() {
+	async function updateHtml() {
 		if (!props.content) return;
 
 		// try to find all links in thew content (in markdown format, so [text](url))
@@ -35,7 +35,7 @@
 			}
 		);
 
-		let out = shikiHighlighter.codeToHtml(content, props.lang);
+		let out = await shikiHighlighter.codeToHtml(content, props.lang);
 
 		for (const [linkTo, { text, url }] of links) {
 			out = out.replace(linkTo, `<a href="${url}">${text}</a>`);

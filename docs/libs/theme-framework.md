@@ -4,7 +4,7 @@ outline: [1, 3]
 name: ThemeFramework
 description: The framework that sets up the theming engine for all components.
 usage: |
-  ThemeFramework doesn't have it's own documentation and for that reason, most relevant functions and types are documented 
+  theme-framework doesn't have it's own documentation and for that reason, most relevant functions and types are documented 
   here as they are widely used throughout the components.
 
   The theming engine allows a `color`, `transparency` and `shadow` to be defined. Each base component will pick up on these. 
@@ -63,47 +63,46 @@ functions:
       When a color is not found, we still need a color to return to prevent errors.
       When defining themes, it's generally smart to just call this function with a color that fits the theme somewhat.
 
-types: 
-# just define the names for now
+types:
+  # just define the names for now
   - name: "color"
     type: |
-        {
-            color: string,
-            transparency: number,
-            shadow: number,
-        }
+      {
+          color: string,
+          transparency: number,
+          shadow: number,
+      }
   - name: "colorOptional"
     type: |
-        {
-            color: string?,
-            transparency: number?,
-            shadow: number?,
-        }
+      {
+          color: string?,
+          transparency: number?,
+          shadow: number?,
+      }
   - name: "colorTable"
     type: |
-        [color](#type-color) | {
-            [string]: [colorTable](#type-colorTable),
-        }
+      [color](#type-color) | {
+          [string]: [colorTable](#type-colorTable),
+      }
   - name: "optionalColorTable"
     type: |
-        [colorOptional](#type-colorOptional) | {
-            [string]: [optionalColorTable](#type-optionalColorTable),
-        }
+      [colorOptional](#type-colorOptional) | {
+          [string]: [optionalColorTable](#type-optionalColorTable),
+      }
   - name: "useColorFunction"
     description: |
-        This function is returned by `theme:get` and is used to get the color data for a specific field.
+      This function is returned by `theme:get` and is used to get the color data for a specific field.
 
-        **If a color is not found, it will return a table with the fallback color set, and transparency set to 1.**
+      **If a color is not found, it will return a table with the fallback color set, and transparency set to 1.**
     type: |
-        (index: fusion.CanBeState<string>, reactive: boolean?) -> fusion.Computed<[color](#type-color)> | [color](#type-color)
+      (index: fusion.CanBeState<string>, reactive: boolean?) -> fusion.Computed<[color](#type-color)> | [color](#type-color)
   - name: "componentColorList"
     type: |
-        {
-            [string]: {
-                [string]: [color](#type-color),
-            }
-        }
-
+      {
+          [string]: {
+              [string]: [color](#type-color),
+          }
+      }
 ---
 
 <ComponentView :frontmatter="$frontmatter"/>

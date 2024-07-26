@@ -5,17 +5,17 @@ outline: deep
 <script setup>
 const packageVersions = {
     FusionComponents: "0.0.265",
-    ThemeFramework: "0.0.153",
-    FusionUtils: "0.0.144",
+    "theme-framework": "0.0.153",
+    "fusion-utils": "0.0.144",
     Tailwind: "0.0.135",
 }
 
 const packagesContent = `[dependencies]
 FusionComponents = "VirtualButFake/FusionComponents@${packageVersions.FusionComponents}"
-ThemeFramework = "VirtualButFake/ThemeFramework@${packageVersions.ThemeFramework}"
-# FusionUtils is recommended due to a lot of components depending on a 
-# layer being created. This is done through [TopLayerProvider](/libs/top-layer-provider) in FusionUtils.
-FusionUtils = "VirtualButFake/FusionUtils@${packageVersions.FusionUtils}"
+theme-framework = "VirtualButFake/theme-framework@${packageVersions["theme-framework"]}"
+# fusion-utils is recommended due to a lot of components depending on a 
+# layer being created. This is done through [TopLayerProvider](/libs/top-layer-provider) in fusion-utils.
+fusion-utils = "VirtualButFake/fusion-utils@${packageVersions["fusion-utils"]}"
 # If you want to use Tailwind colors for your themes, add this line.
 Tailwind = "VirtualButFake/Tailwind@${packageVersions.Tailwind}"`
 </script>
@@ -27,7 +27,7 @@ FusionComponents is accessible through Wally.
 ## Installation
 
 1. Make sure you have [Rojo](https://github.com/rojo-rbx/rojo) and [Wally](https://github.com/UpliftGames/wally) installed.
-2. Add FusionComponents and ThemeFramework to your `wally.toml` file.
+2. Add FusionComponents and theme-framework to your `wally.toml` file.
 
 <!-- We make this a CodeBlock instead of just using markdown because we want links to render correctly -->
 <CodeBlock lang="toml" :content="packagesContent"/>
@@ -98,7 +98,7 @@ return setmetatable({
 
 More fleshed out examples can be found [here](https://github.com/VirtualButFake/VFXEditor/blob/main/src/theme/init.luau) and [here](https://github.com/VirtualButFake/VFXEditor/blob/main/src/theme/init.luau).
 
-A short documentation on ThemeFramework can be found [here](/libs/theme-framework).
+A short documentation on theme-framework can be found [here](/libs/theme-framework).
 
 4. Create a folder named after your component inside of the `theme/components` folder. This is where you will define the appearance of your components.
 5. Create a folder named after a color, or `default` for fallback, inside of the component folder. This is where you will define the appearance of your components in that color.
@@ -145,11 +145,11 @@ end
 
 ## Appearance Overrides
 
-FusionComponents and ThemeFramework allows full customization of all colors through Appearance Overrides. These values are passed into a component instance and can be used to override the default appearance of a component.
+FusionComponents and theme-framework allows full customization of all colors through Appearance Overrides. These values are passed into a component instance and can be used to override the default appearance of a component.
 
 **These values are passed through `theme:get()`, as it's last, optional, parameter.**
 
-ThemeFramework finds the depth of the table passed and determines where to merge based on this depth. As such, these overrides work on many levels:
+theme-framework finds the depth of the table passed and determines where to merge based on this depth. As such, these overrides work on many levels:
 
 1. State Level: This is used to override components when in a specific state. These tables look as follows:
 
