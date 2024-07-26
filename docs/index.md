@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  text: "Simple, beautiful components for use in Roblox Studio plugins"
+  text: "Simple, beautiful Fusion components for Roblox."
   actions:
     - theme: brand
       text: Get Started

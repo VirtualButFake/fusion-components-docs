@@ -63,7 +63,7 @@ export default defineConfig({
 				items: [
 					{
 						text: "What is FusionComponents?",
-						link: "/what-is-FusionComponents",
+						link: "/what-is-fusioncomponents",
 					},
 					{
 						text: "Getting Started",

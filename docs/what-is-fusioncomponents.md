@@ -1,6 +1,6 @@
 # What is FusionComponents?
 
-FusionComponents is a collection of Fusion components for use in plugins.
+FusionComponents is a large collection of components for varying use cases. It was originally designed to increase development speed for plugins, but has since been expanded to be used in any Roblox project.
 
 ## Features
 

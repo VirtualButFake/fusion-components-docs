@@ -135,7 +135,7 @@
 				:content="getDescription(property.description)"
 			/>
 			<div v-if="property.type">
-				<h4 :id="`property-${property.name}-type`">Type</h4>
+				<h4 class="mt-0" :id="`property-${property.name}-type`">Type</h4>
 				<CodeBlock
 					:content="`type ${camelCase(property.name)} = ${property.type}`"
 				/>
@@ -161,13 +161,13 @@
 			</h3>
 			<MarkdownString v-if="slot.description" :content="slot.description" />
 			<div v-if="slot.type">
-				<h4 :id="`slot-${slot.name}-type`">Function Type</h4>
+				<h4 class="mt-0" :id="`slot-${slot.name}-type`">Function Type</h4>
 				<CodeBlock
 					:content="`type ${camelCase(slot.name)}Slot = ${slot.type}`"
 				/>
 			</div>
 			<div v-if="slot.uiDemo">
-				<h4>Usage</h4>
+				<h4 class="mt-0">Usage</h4>
 				<UIDemo
 					:image="slot.uiDemo.image"
 					:imageDark="slot.uiDemo.imageDark"
@@ -275,7 +275,7 @@
 				:content="type.description"
 			/>
 			<div v-if="type.type">
-				<h4 :id="`type-${type.name}-type`">Type</h4>
+				<h4 class="mt-0" :id="`type-${type.name}-type`">Type</h4>
 				<CodeBlock :content="`type ${camelCase(type.name)} = ${type.type}`" />
 			</div>
 		</div>
