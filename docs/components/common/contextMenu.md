@@ -99,7 +99,7 @@ properties:
   - name: "Visible"
     type: "fusion.Value<boolean>?"
     description: "Whether the context menu is visible. This bypasses the `Enabled` property."
-  - name: "EnabledLogic"
+  - name: "VisibleLogic"
     type: "((toOpen: boolean) -> boolean)?"
     description: "Whenever the context menu is opened via normal means, this function will be called. If it returns false, the context menu will not open. This is useful for defining custom conditions for when the context menu should be opened."
   - name: "Options"
