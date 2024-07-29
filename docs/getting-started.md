@@ -4,10 +4,10 @@ outline: deep
 
 <script setup>
 const packageVersions = {
-    "fusion-components": "0.0.265",
-    "theme-framework": "0.0.153",
-    "fusion-utils": "0.0.144",
-    tailwind: "0.0.135",
+    "fusion-components": "0.1.1",
+    "theme-framework": "0.1.0",
+    "fusion-utils": "0.1.0",
+    tailwind: "0.1.0",
 }
 
 const packagesContent = `[dependencies]
