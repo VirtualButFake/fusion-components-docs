@@ -27,13 +27,22 @@ properties:
     type: "fusion.CanBeState<{ Instance }>?"
   - name: "OnClick"
     type: "(() -> nil)?"
+  - name: "OnMouseButton2Click"
+    type: "(() -> nil)?"
   - name: "OnMouseButton1Changed"
     description: |
       This event is fired when the left mouse button is pressed or released.
 
       Something to note is that when the mouse leaves the button, this event fires with `false`.
       This is done as a safety measure to ensure that the button is not stuck in a pressed state.
-    type: "((isPressed: boolean) -> nil)?"
+    type: "((isDown: boolean) -> nil)?"
+  - name: "OnMouseButton2Changed"
+    description: |
+      This event is fired when the right mouse button is pressed or released.
+
+      Something to note is that when the mouse leaves the button, this event fires with `false`.
+      This is done as a safety measure to ensure that the button is not stuck in a pressed state.
+    type: "((isDown: boolean) -> nil)?"
   - name: "OnHover"
     type: "((hoverState: boolean) -> nil)?"
   - name: "DisableHoverLighting"
