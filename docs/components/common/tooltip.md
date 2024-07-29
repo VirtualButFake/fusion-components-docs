@@ -60,7 +60,7 @@ properties:
     description: "If this is true, custom behaviour can be used for displaying the tooltip, by manipulating the `Visible` property."
     type: "boolean?"
   - name: "Padding"
-    type: "fusion.CanBeState<number>?"
+    type: "fusion.CanBeState<UDim>?"
   - name: "Enabled"
     type: "fusion.CanBeState<boolean>?"
   - name: "Instance Properties"
