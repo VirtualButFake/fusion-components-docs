@@ -4,7 +4,7 @@ outline: deep
 
 <script setup>
 const packageVersions = {
-    "fusion-components": "0.1.4",
+    "fusion-components": "0.1.5",
     "theme-framework": "0.1.0",
     "fusion-utils": "0.1.0",
     tailwind: "0.1.0",
