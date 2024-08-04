@@ -38,7 +38,7 @@ export default defineConfig({
 	themeConfig: {
 		nav: [
 			{ text: "Home", link: "/" },
-			{ text: "Guide", link: "/get-started" },
+			{ text: "Guide", link: "/getting-started" },
 			{ text: "Components", link: "/components/base/button" },
 			{
 				text: await getCurrentVersion(),
