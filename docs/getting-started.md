@@ -209,7 +209,7 @@ You may override any of these values to all occurences of a color in a component
    This might make it seem complicated to mix levels, to for example modify both a certain state and all states at the same time. However, that's where `_global` comes into play.
    `_global` allows you to override all keys at the depth where it was applied. This is done when merging with the original color table.
 
-As such, combining an override at the state and color level may be done as follows:
+As such, combining an override at the state and value level may be done as follows:
 
 ```luau
 {
