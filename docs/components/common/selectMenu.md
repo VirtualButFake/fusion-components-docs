@@ -74,7 +74,7 @@ componentCode: |
 properties:
   - name: ["Color", "Variant", "AppearanceOverride"]
     description: |
-      This component uses styling from the `[Input](/components/common/input)` component, and as such, the `Color`, `Variant`, and `AppearanceOverride` properties are passed to the `Input` component.
+      This component uses styling from the [Input](/components/common/input) component, and as such, the `Color`, `Variant`, and `AppearanceOverride` properties are passed to the `Input` component.
 
       Information for styling the `Input` component can be found [here](/components/common/input/#property-Color,Variant,AppearanceOverride).
 
