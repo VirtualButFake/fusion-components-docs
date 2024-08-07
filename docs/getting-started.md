@@ -227,3 +227,19 @@ As such, combining an override at the state and value level may be done as follo
 ```
 
 This will override the background color of the base state, and set the transparency of the stroke to 1 for all states.
+
+## Setting the theme or modifying fonts
+
+In cases where FusionComponents is used outside plugins, you may not have access to automatic theme events. As such, you can manually set the theme to either `Dark` or `Light` through the exposed `theme` object.
+
+```luau
+local theme = fusionComponents.theme
+theme.setTheme("Dark")
+```
+
+If you wish to customize the font used by all components, you can do so through the `theme` object as well.
+
+```luau
+local theme = fusionComponents.theme
+theme.setFont(Font.fromEnum(Enum.Font.Roboto))
+```
