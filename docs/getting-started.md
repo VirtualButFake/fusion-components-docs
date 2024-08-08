@@ -92,7 +92,9 @@ return setmetatable({
 		Clean(connections)
         theme = nil
     end
-}, theme) :: themeFramework.themeFramework & {
+}, {
+	__index = theme,
+}) :: themeFramework.themeFramework & {
     destroy: () -> ()
 }
 ```
@@ -245,7 +247,7 @@ theme:addLocation(script.newLocation)
 
 In cases where FusionComponents is used outside plugins, you may not have access to automatic theme events. As such, you can manually set the theme to either `Dark` or `Light` or edit the font through the exposed `theme` object.
 
-### Setting the theme 
+### Setting the theme
 
 ```luau
 local theme = fusionComponents.theme
