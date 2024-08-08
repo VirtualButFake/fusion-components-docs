@@ -15,7 +15,7 @@ fusionComponents = "virtualbutfake/fusion-components@${packageVersions["fusion-c
 themeFramework = "virtualbutfake/theme-framework@${packageVersions["theme-framework"]}"
 # fusion-utils is recommended due to a lot of components depending on a 
 # layer being created. This is done through [TopLayerProvider](/libs/top-layer-provider) in fusion-utils.
-fusionUtils = "VirtualButFake/fusion-utils@${packageVersions["fusion-utils"]}"
+fusionUtils = "virtualbutfake/fusion-utils@${packageVersions["fusion-utils"]}"
 # If you want to use Tailwind colors for your themes, add this line.
 tailwind = "virtualbutfake/tailwind@${packageVersions.tailwind}"`
 </script>
