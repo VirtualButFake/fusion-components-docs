@@ -28,7 +28,7 @@ properties:
       This way, the canvas can dynamically render shadows without causing sizing conflicts.
 
       Components like [`popover`](/components/common/popover) have this built-in, but if you wish to implement this on your own components, simply pass in a theme color that has a `shadow` field.
-    type: "[theme.color](/libs/theme-framework#type-color)?"
+    type: "fusion.CanBeState<[theme.color](/libs/theme-framework#type-color)>?"
   - name: "Instance Properties"
     description: "This instance takes all the properties of a `Frame`. `SpecialKeys`, such as `fusion.Children` will also be passed to the instance."
 ---
