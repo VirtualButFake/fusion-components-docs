@@ -231,7 +231,7 @@ This will override the background color of the base state, and set the transpare
 ## Completely modifying the theme
 
 There are cases in which you don't want to modify just a single instance of a component, but the entire component's default appearance. You can do this through alternative theme locations.
-Create a new folder that contains theme objects, set up like [Getting Started](#writing-components). Then, call `theme:addThemeLocation()` with the new location.
+Create a new folder that contains theme objects, set up like [Getting Started](#writing-components). Then, call `theme:addLocation()` with the new location.
 
 Make sure to use the existing theme structure, as the theme engine will look for the same structure in the new location. You can find that structure [here](https://github.com/VirtualButFake/fusion-components/tree/main/src/theme/components)
 
