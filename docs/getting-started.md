@@ -56,6 +56,7 @@ local Studio = settings().studio
 
 local themeFramework = require(path.to.themeframework)
 local fusion = require(path.to.fusion)
+local Clean = fusion.cleanup
 
 export type color = themeFramework.color
 export type colorTable = themeFramework.colorTable
@@ -91,7 +92,7 @@ return setmetatable({
 		Clean(connections)
         theme = nil
     end
-}) :: themeFramework.themeFramework & {
+}, theme) :: themeFramework.themeFramework & {
     destroy: () -> ()
 }
 ```
