@@ -11,13 +11,13 @@ const packageVersions = {
 }
 
 const packagesContent = `[dependencies]
-fusionComponents = "VirtualButFake/fusion-components@${packageVersions["fusion-components"]}"
-themeFramework = "VirtualButFake/theme-framework@${packageVersions["theme-framework"]}"
+fusionComponents = "virtualbutfake/fusion-components@${packageVersions["fusion-components"]}"
+themeFramework = "virtualbutfake/theme-framework@${packageVersions["theme-framework"]}"
 # fusion-utils is recommended due to a lot of components depending on a 
 # layer being created. This is done through [TopLayerProvider](/libs/top-layer-provider) in fusion-utils.
 fusionUtils = "VirtualButFake/fusion-utils@${packageVersions["fusion-utils"]}"
 # If you want to use Tailwind colors for your themes, add this line.
-tailwind = "VirtualButFake/tailwind@${packageVersions.tailwind}"`
+tailwind = "virtualbutfake/tailwind@${packageVersions.tailwind}"`
 </script>
 
 # Getting Started
