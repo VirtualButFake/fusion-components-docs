@@ -36,6 +36,16 @@ functions:
     description: |
       This function is the function you'll be interacting with the most. 
       It returns a function that given a field, returns the color data for that field.
+  - name: "addThemeLocation"
+    code: |
+        theme:addThemeLocation(
+            componentLocation: Instance,
+        ) -> ()
+    description: |
+        This function is used to add a new theme location to the theme engine.
+        This is useful in scenarios where you want to completely overhaul certain components, in all cases.
+        The new component location will be used as an alternative location. During `theme:get()`, ThemeFramework will check if the component exists in the new location, and if it does, it will use that instead. 
+        Otherwise, it will use the default location.
   - name: "build"
     code: |
       theme:build(

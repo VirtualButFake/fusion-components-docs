@@ -228,18 +228,32 @@ As such, combining an override at the state and value level may be done as follo
 
 This will override the background color of the base state, and set the transparency of the stroke to 1 for all states.
 
-## Setting the theme or modifying fonts
+## Completely modifying the theme
 
-In cases where FusionComponents is used outside plugins, you may not have access to automatic theme events. As such, you can manually set the theme to either `Dark` or `Light` through the exposed `theme` object.
+There are cases in which you don't want to modify just a single instance of a component, but the entire component's default appearance. You can do this through alternative theme locations.
+Create a new folder that contains theme objects, set up like [Getting Started](#writing-components). Then, call `theme:addThemeLocation()` with the new location.
+
+Make sure to use the existing theme structure, as the theme engine will look for the same structure in the new location. You can find that structure [here](https://github.com/VirtualButFake/fusion-components/tree/main/src/theme/components)
 
 ```luau
 local theme = fusionComponents.theme
-theme.setTheme("Dark")
+theme:addThemeLocation(script.newLocation)
 ```
 
-If you wish to customize the font used by all components, you can do so through the `theme` object as well.
+## Setting the theme or modifying fonts
+
+In cases where FusionComponents is used outside plugins, you may not have access to automatic theme events. As such, you can manually set the theme to either `Dark` or `Light` or edit the font through the exposed `theme` object.
+
+### Setting the theme 
 
 ```luau
 local theme = fusionComponents.theme
-theme.setFont(Font.fromEnum(Enum.Font.Roboto))
+theme:load(theme:build("Dark"))
+```
+
+### Setting the font
+
+```luau
+local theme = fusionComponents.theme
+theme.global.Font:set(Font.fromEnum(Enum.Font.Roboto))
 ```
