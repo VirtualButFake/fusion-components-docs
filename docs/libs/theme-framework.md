@@ -36,9 +36,9 @@ functions:
     description: |
       This function is the function you'll be interacting with the most. 
       It returns a function that given a field, returns the color data for that field.
-  - name: "addThemeLocation"
+  - name: "addLocation"
     code: |
-        theme:addThemeLocation(
+        theme:addLocation(
             componentLocation: Instance,
         ) -> ()
     description: |

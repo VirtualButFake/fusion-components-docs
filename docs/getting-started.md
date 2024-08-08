@@ -4,8 +4,8 @@ outline: deep
 
 <script setup>
 const packageVersions = {
-    "fusion-components": "0.1.12",
-    "theme-framework": "0.1.2",
+    "fusion-components": "0.1.16",
+    "theme-framework": "0.1.6",
     "fusion-utils": "0.1.2",
     tailwind: "0.1.1",
 }
@@ -237,7 +237,7 @@ Make sure to use the existing theme structure, as the theme engine will look for
 
 ```luau
 local theme = fusionComponents.theme
-theme:addThemeLocation(script.newLocation)
+theme:addLocation(script.newLocation)
 ```
 
 ## Setting the theme or modifying fonts
