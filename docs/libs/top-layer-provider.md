@@ -40,6 +40,8 @@ functions:
       This function is used to create a new top layer. 
       Given a frame, it will nest the frame inside of a new layer frame so that it can be layered properly. 
       This frame is returned, and should be used instead of the original frame.
+
+      Something to note is that the layer created attempts to keep the same size as the reference layer, by monitoring the AbsoluteSize of the reference layer. However, using a frame that uses `Scale` instead of `Offset` sizing will result in it shrinking to 0, 0. To combat this, place the layer as high as possible in your UI hierarchy (so don't wrap a single frame in a layer, but rather wrap the entire UI in a single layer). You want to use as few layers as possible, only using them to isolate certain interaction areas in your UI.
   - name: "getLayer"
     code: |
       topLayerProvider.getLayer(
