@@ -10,7 +10,7 @@ usage: |
 
 colors:
   - name: "Default"
-    identifier: "gray"
+    identifier: "default"
     variants: ["default", "transparent"]
 
 componentCode: |
